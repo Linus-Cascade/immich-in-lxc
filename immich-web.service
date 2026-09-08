@@ -3,6 +3,7 @@ Description=immich web server
 Documentation=https://github.com/immich-app/immich
 Requires=redis-server.service
 Requires=immich-ml.service
+Requires=postgresql.service
 
 [Service]
 User=immich
