@@ -682,7 +682,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 set -a
-. $INSTALL_DIR/runtime.env
+. /home/immich/env/runtime.env
 set +a
 
 cd $INSTALL_DIR_app
@@ -694,7 +694,7 @@ EOF
 #!/bin/bash
 
 set -a
-. $INSTALL_DIR/runtime.env
+. /home/immich/env/runtime.env
 set +a
 
 cd $INSTALL_DIR_ml
