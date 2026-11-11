@@ -586,6 +586,9 @@ jobs:
             test -s "$INSTALL_DIR/geodata/$file"
           done
 
+      - name: Debug perms
+        run: ls -la $INSTALL_DIR/app/pnpm-lock.yaml $INSTALL_DIR/app/pnpm-workspace.yaml $INSTALL_DIR/app/node_modules/.pnpm-workspace-state-v1.json
+
       - name: Archive app folder
         run: |
           tar -czf server.tar.gz -C $INSTALL_DIR app geodata
