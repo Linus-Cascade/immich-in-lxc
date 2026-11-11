@@ -588,7 +588,8 @@ jobs:
 
       - name: Archive app folder
         run: |
-          tar -czf server.tar.gz -C $INSTALL_DIR app geodata
+          sudo tar -czf server.tar.gz -C "$INSTALL_DIR" app geodata
+          sudo chown "$(id -u):$(id -g)" server.tar.gz
 
       - name: Upload server artifact
         uses: actions/upload-artifact@v4
